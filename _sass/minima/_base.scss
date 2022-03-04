@@ -256,5 +256,5 @@ table {
 
 .tabl { display:table}
 .row {display:table-row}
-.cell {border:1px solid black;display:table-cell}
-.cellright {border:1px solid black; display:table-cell; text-align:right}
+.cell {display:table-cell; width: 350px;}
+.cellright { display:table-cell; text-align:right; width: 75px;}

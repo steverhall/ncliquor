@@ -15,10 +15,10 @@ layout: default
       <div class="row">
         {% if supplier == bottle.supplier %}
           <div class="cell">
-            <h3>{{ bottle.brand_name }}</h3>
+            {{ bottle.brand_name }}
           </div>
           <div class="cellright">
-            <h3>{{ bottle.proof }}</h3>
+            {{ bottle.proof }}
           </div>
           <div class="cellright">
             {{ bottle.age }}
@@ -31,7 +31,10 @@ layout: default
           </div>
         </div>
         {% else %}
-          </div><H2>{{ bottle.supplier }}</H2>
+          </div>
+          </div>
+          <H2>{{ bottle.supplier }}</H2>
+          <div class="tabl">
           {% assign supplier = bottle.supplier %}
         {% endif %}
       
