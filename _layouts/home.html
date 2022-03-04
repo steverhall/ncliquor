@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home">
+  {%- if page.title -%}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+    <div class="tabl">
+    {% assign supplier = "" %}
+    {% for bottle in site.data.nc_quarterly_pricing %}
+      <div class="row">
+        {% if supplier == bottle.supplier %}
+          <div class="cell">
+            <h3>{{ bottle.brand_name }}</h3>
+          </div>
+          <div class="cellright">
+            <h3>{{ bottle.proof }}</h3>
+          </div>
+          <div class="cellright">
+            {{ bottle.age }}
+          </div>
+          <div class="cellright">
+            {{ bottle.bottle_size }}
+          </div>
+          <div class="cellright">
+            {{ bottle.retail_bottle_price }}
+          </div>
+        </div>
+        {% else %}
+          </div><H2>{{ bottle.supplier }}</H2>
+          {% assign supplier = bottle.supplier %}
+        {% endif %}
+      
+    {% endfor %}
+  </div>
+</div>

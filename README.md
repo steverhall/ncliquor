@@ -1,2 +1,1 @@
-# ncliquor
-NC ABC Liquor pricelist
+## NC ABC Liquor pricelist
